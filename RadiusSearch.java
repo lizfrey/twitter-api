@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 import java.util.StringTokenizer;
 
-public class Twitter_3
+public class RadiusSearch
 {
    private static PrintStream consolePrint;
    
@@ -13,35 +13,6 @@ public class Twitter_3
    {
       consolePrint = System.out; // this preserves the standard output so we can get to it later      
       TJTwitter bigBird = new TJTwitter(consolePrint);
-            
-      /*GeoLocation [] location = new GeoLocation[244];
-      int [] count = new int[244];
-      
-      Scanner sc = new Scanner(new File("coords.txt"));
-      
-      for(int i = 0; i < 244; i++)
-      {
-         StringTokenizer x = new StringTokenizer(sc.nextLine());
-         x.nextToken();
-         location[i] = new GeoLocation(Double.parseDouble(x.nextToken()), Double.parseDouble(x.nextToken()));
-      }
-      for(int i = 0; i<10; i++)
-      {
-         Twitter twitter = TwitterFactory.getSingleton();
-         Query query = new Query("flu");
-      
-         query.setCount(5);
-      
-         query.geoCode(location[i],10,"km");
-         QueryResult result = twitter.search(query);      
-         for (Status status : result.getTweets()) {
-            count[i] ++;
-         }
-      }
-      
-      for(int i:count)
-         System.out.println(i);
-      */
       
       GeoLocation [] count = new GeoLocation[100000];
       
